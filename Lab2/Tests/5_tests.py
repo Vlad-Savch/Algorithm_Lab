@@ -1,5 +1,5 @@
 import unittest
-from Lab2.five import solve
+from Lab2.src.five import solve
 
 
 class TestMajorityElement(unittest.TestCase):

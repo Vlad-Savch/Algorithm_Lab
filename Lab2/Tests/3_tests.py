@@ -1,5 +1,5 @@
 import unittest
-from Lab2.three import count_inversions
+from Lab2.src.three import count_inversions
 
 
 class TestCountInversions(unittest.TestCase):

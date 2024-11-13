@@ -1,6 +1,6 @@
 import unittest
 import os
-from Lab2.four import binary_search, main
+from Lab2.src.four import binary_search, main
 
 
 class TestMainFunction(unittest.TestCase):

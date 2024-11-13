@@ -1,6 +1,6 @@
 import unittest
 import random
-from Lab2.one import merge_sort
+from Lab2.src.one import merge_sort
 
 
 class TestMergeSortWithFiles(unittest.TestCase):
