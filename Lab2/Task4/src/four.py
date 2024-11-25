@@ -12,7 +12,7 @@ def binary_search(a, x):
 
 
 def main():
-    with open('input.txt', 'r') as file:
+    with open('../../Task4/txtf/input.txt', 'r') as file:
         n = int(file.readline().strip())
         a = list(map(int, file.readline().split()))
         k = int(file.readline().strip())
@@ -20,7 +20,7 @@ def main():
 
     result = [binary_search(a, x) for x in b]
 
-    with open('output.txt', 'w') as file:
+    with open('../../Task4/txtf/output.txt', 'w') as file:
         file.write(' '.join(map(str, result)))
 
 

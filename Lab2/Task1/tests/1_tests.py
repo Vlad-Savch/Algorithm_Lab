@@ -1,6 +1,7 @@
 import unittest
 import random
-from Lab2.src.one import merge_sort
+from Lab2.Task1.src.one import merge_sort, main
+from utils import time_data, memory_data
 
 
 class TestMergeSortWithFiles(unittest.TestCase):
@@ -17,3 +18,8 @@ class TestMergeSortWithFiles(unittest.TestCase):
         random_array = random.sample(range(1, 1001), 200)
         expected_result = sorted(random_array)
         self.assertEqual(merge_sort(random_array), expected_result)
+
+    def test_time_memory_data(self):
+        print('Время работы: ', time_data(main), ' секунд')
+        print('Память: ', memory_data(main), 'Мб')
+

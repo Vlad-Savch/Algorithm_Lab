@@ -35,13 +35,13 @@ def solve(a):
 
 
 def main():
-    with open("input.txt", "r") as f:
+    with open("../../Task5/txtf/input.txt", "r") as f:
         n = int(f.readline().strip())
         a = list(map(int, f.readline().strip().split()))
 
     result = solve(a)
 
-    with open("output.txt", "w") as f:
+    with open("../../Task5/txtf/output.txt", "w") as f:
         f.write(str(result))
 
 

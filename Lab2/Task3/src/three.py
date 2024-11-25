@@ -52,13 +52,13 @@ def count_inversions(arr):
 
 
 def main():
-    with open("input.txt", "r") as f:
+    with open("../../Task3/txtf/input.txt", "r") as f:
         n = int(f.readline())
         arr = list(map(int, f.readline().split()))
 
     result = count_inversions(arr)
 
-    with open("output.txt", "w") as f:
+    with open("../../Task3/txtf/output.txt", "w") as f:
         f.write(str(result))
 
 

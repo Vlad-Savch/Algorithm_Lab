@@ -43,13 +43,13 @@ def write_array_to_file(filename, array):
         f.write(" ".join(map(str, array)))
 
 
-def sort_file(input_filename="input.txt", output_filename="output.txt"):
-    arr = read_array_from_file(input_filename)
+def main():
+    arr = read_array_from_file("../../Task2/txtf/input.txt")
 
-    with open(output_filename, "w") as output_file:
+    with open("../../Task2/txtf/output.txt", "w") as output_file:
         merge_sort(arr, 0, len(arr) - 1, output_file)
-    write_array_to_file(output_filename, arr)
+    write_array_to_file("../../Task2/txtf/output.txt", arr)
 
 
 if __name__ == "__main__":
-    sort_file("input.txt", "output.txt")
+    main()

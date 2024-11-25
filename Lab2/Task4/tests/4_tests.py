@@ -1,18 +1,14 @@
 import unittest
-import os
-from Lab2.src.four import binary_search, main
+from Lab2.Task4.src.four import binary_search, main
+from utils import time_data, memory_data
 
 
 class TestMainFunction(unittest.TestCase):
     def setUp(self):
-        self.input_data = "5\n1 5 8 12 13\n5\n8 1 23 1 11"
         self.expected_output = "2 0 -1 0 -1"
 
-        self.input_file = "input.txt"
-        self.output_file = "output.txt"
-
-        with open(self.input_file, "w") as f:
-            f.write(self.input_data)
+        self.input_file = "../../Task4/txtf/input.txt"
+        self.output_file = "../../Task4/txtf/output.txt"
 
     def test_main(self):
         main()
@@ -31,8 +27,6 @@ class TestMainFunction(unittest.TestCase):
 
             self.assertEqual(expected_result, [2, 0, -1, 0, -1])
 
-    def tearDown(self):
-        if os.path.exists(self.input_file):
-            os.remove(self.input_file)
-        if os.path.exists(self.output_file):
-            os.remove(self.output_file)
+    def test_time_memory_data(self):
+        print('Время работы: ', time_data(main), ' секунд')
+        print('Память: ', memory_data(main), 'Мб')

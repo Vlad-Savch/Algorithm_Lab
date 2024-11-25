@@ -40,5 +40,9 @@ def sort_file(input_filename="input.txt", output_filename="output.txt"):
     write_array_to_file(output_filename, sorted_array)
 
 
+def main():
+    sort_file("../txtf/input.txt", "../txtf/output.txt")
+
+
 if __name__ == "__main__":
-    sort_file("input.txt", "output.txt")
+    main()
