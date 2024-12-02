@@ -15,7 +15,7 @@ class TestMajorityElement(unittest.TestCase):
         a = [1, 2, 3, 4]
         self.assertEqual(solve(a), 0)
 
-    def test_inversion_count(self):
+    def test_main_function(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             input_file = os.path.join(temp_dir, "input.txt")
             output_file = os.path.join(temp_dir, "output.txt")
@@ -35,4 +35,4 @@ class TestMajorityElement(unittest.TestCase):
             self.assertEqual(result, "0")
 
             print('\nВремя работы:', execution_time, 'секунд')
-            print('Использование памяти:', memory_usage, 'Мб')
+            print('Память:', memory_usage, 'Мб')

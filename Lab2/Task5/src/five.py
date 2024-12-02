@@ -1,6 +1,7 @@
 import os
 from utils import read_array_from_file, write_array_to_file
 
+
 def majority_element(a, left, right):
     if left == right:
         return a[left]

@@ -19,7 +19,7 @@ class TestMaxSubarraySum(unittest.TestCase):
         arr = [i for i in range(-1000, 1001)]
         self.assertEqual(max_subarray_sum(arr), sum(arr[1000:2001]))
 
-    def test_inversion_count(self):
+    def test_main_function(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             input_file = os.path.join(temp_dir, "input.txt")
             output_file = os.path.join(temp_dir, "output.txt")
@@ -39,4 +39,4 @@ class TestMaxSubarraySum(unittest.TestCase):
             self.assertEqual(result, '9')
 
             print('\nВремя работы:', execution_time, 'секунд')
-            print('Использование памяти:', memory_usage, 'Мб')
+            print('Память:', memory_usage, 'Мб')
