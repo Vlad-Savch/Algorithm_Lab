@@ -1,3 +1,7 @@
+import os
+from utils import read_array_from_file, write_array_to_file
+
+
 def merge(arr, left, mid, right, output_file):
     temp = []
     i, j = left, mid + 1
@@ -29,26 +33,22 @@ def merge_sort(arr, left, right, output_file):
         merge_sort(arr, left, mid, output_file)
         merge_sort(arr, mid + 1, right, output_file)
         merge(arr, left, mid, right, output_file)
+    return arr
 
 
-def read_array_from_file(filename):
-    with open(filename, "r") as f:
-        f.readline()
-        array = list(map(int, f.readline().strip().split()))
-    return array
+def process_file(input_filename, output_filename):
+    base_dir = os.path.dirname(__file__)
+    input_path = os.path.join(base_dir, "../txtf", input_filename)
+    output_path = os.path.join(base_dir, "../txtf", output_filename)
+
+    array = read_array_from_file(input_path)
+    with open(output_path, 'w') as output_file:
+        merge_sort(array, 0, len(array) - 1, output_file)
+        output_file.write(" ".join(map(str, array)))
 
 
-def write_array_to_file(filename, array):
-    with open(filename, "a") as f:
-        f.write(" ".join(map(str, array)))
-
-
-def main():
-    arr = read_array_from_file("../../Task2/txtf/input.txt")
-
-    with open("../../Task2/txtf/output.txt", "w") as output_file:
-        merge_sort(arr, 0, len(arr) - 1, output_file)
-    write_array_to_file("../../Task2/txtf/output.txt", arr)
+def main(input_filename="../txtf/input.txt", output_filename="../txtf/output.txt"):
+    process_file(input_filename, output_filename)
 
 
 if __name__ == "__main__":

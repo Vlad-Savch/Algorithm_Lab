@@ -1,3 +1,6 @@
+from utils import read_array_from_file, write_array_to_file
+import os
+
 def merge_count(arr, temp_arr, left, right):
     if left == right:
         return 0
@@ -51,15 +54,18 @@ def count_inversions(arr):
     return merge_count(arr, temp_arr, 0, n - 1)
 
 
-def main():
-    with open("../../Task3/txtf/input.txt", "r") as f:
-        n = int(f.readline())
-        arr = list(map(int, f.readline().split()))
+def process_file(input_filename, output_filename):
+    base_dir = os.path.dirname(__file__)
+    input_path = os.path.join(base_dir, "../txtf", input_filename)
+    output_path = os.path.join(base_dir, "../txtf", output_filename)
 
-    result = count_inversions(arr)
+    array = read_array_from_file(input_filename)
+    result = count_inversions(array)
+    write_array_to_file(output_filename, str(result))
 
-    with open("../../Task3/txtf/output.txt", "w") as f:
-        f.write(str(result))
+
+def main(input_filename="../txtf/input.txt", output_filename="../txtf/output.txt"):
+    process_file(input_filename, output_filename)
 
 
 if __name__ == "__main__":

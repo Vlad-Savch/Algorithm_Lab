@@ -1,3 +1,7 @@
+import os
+from utils import read_array_from_file, write_array_to_file
+
+
 def binary_search(a, x):
     left, right = 0, len(a) - 1
     while left <= right:
@@ -11,8 +15,8 @@ def binary_search(a, x):
     return -1
 
 
-def main():
-    with open('../../Task4/txtf/input.txt', 'r') as file:
+def process_file(input_path, output_path):
+    with open(input_path, 'r') as file:
         n = int(file.readline().strip())
         a = list(map(int, file.readline().split()))
         k = int(file.readline().strip())
@@ -20,8 +24,16 @@ def main():
 
     result = [binary_search(a, x) for x in b]
 
-    with open('../../Task4/txtf/output.txt', 'w') as file:
+    with open(output_path, 'w') as file:
         file.write(' '.join(map(str, result)))
+
+
+def main():
+    base_dir = os.path.dirname(__file__)
+    input_path = os.path.join(base_dir, '../../Task4/txtf/input.txt')
+    output_path = os.path.join(base_dir, '../../Task4/txtf/output.txt')
+
+    process_file(input_path, output_path)
 
 
 if __name__ == "__main__":

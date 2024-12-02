@@ -13,3 +13,16 @@ def memory_data(func):
     func()
     current, peak = tracemalloc.get_traced_memory()
     return current / 1024 ** 2
+
+
+def read_array_from_file(input_filename):
+    with open(input_filename, "r") as f:
+        f.readline()
+        array = list(map(int, f.readline().strip().split()))
+    return array
+
+
+def write_array_to_file(output_filename, array):
+    with open(output_filename, "w") as f:
+        f.write(" ".join(map(str, array)))
+

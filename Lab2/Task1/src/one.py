@@ -1,3 +1,6 @@
+from utils import read_array_from_file, write_array_to_file
+import os
+
 def merge(left, right):
     result = []
     i = j = 0
@@ -22,26 +25,18 @@ def merge_sort(arr):
     return merge(left_half, right_half)
 
 
-def read_array_from_file(filename):
-    with open(filename, "r") as f:
-        f.readline()
-        array = list(map(int, f.readline().strip().split()))
-    return array
-
-
-def write_array_to_file(filename, array):
-    with open(filename, "w") as f:
-        f.write(" ".join(map(str, array)))
-
-
 def sort_file(input_filename="input.txt", output_filename="output.txt"):
+    base_dir = os.path.dirname(__file__)
+    input_path = os.path.join(base_dir, "../txtf", input_filename)
+    output_path = os.path.join(base_dir, "../txtf", output_filename)
+
     array = read_array_from_file(input_filename)
     sorted_array = merge_sort(array)
     write_array_to_file(output_filename, sorted_array)
 
 
-def main():
-    sort_file("../txtf/input.txt", "../txtf/output.txt")
+def main(input_filename="../txtf/input.txt", output_filename="../txtf/output.txt"):
+    sort_file(input_filename, output_filename)
 
 
 if __name__ == "__main__":
