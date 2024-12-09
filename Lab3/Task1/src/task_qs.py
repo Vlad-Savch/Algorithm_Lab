@@ -1,4 +1,5 @@
 import random
+import os
 from utils import read_array_from_file, write_array_to_file
 
 
@@ -34,13 +35,17 @@ def randomized_quick_sort3(arr, low, high):
 
 
 def quick_sort_file3(input_filename, output_filename):
+    base_dir = os.path.dirname(__file__)
+    input_path = os.path.join(base_dir, "../txtf", input_filename)
+    output_path = os.path.join(base_dir, "../txtf", output_filename)
+
     arr = read_array_from_file(input_filename)
     randomized_quick_sort3(arr, 0, len(arr) - 1)
     write_array_to_file(output_filename, arr)
 
 
-def main():
-    quick_sort_file3('../txtf/input.txt', '../txtf/output.txt')
+def main(input_filename="../txtf/input.txt", output_filename="../txtf/output.txt"):
+    quick_sort_file3(input_filename, output_filename)
 
 
 if __name__ == "__main__":

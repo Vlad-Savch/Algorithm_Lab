@@ -1,5 +1,5 @@
 import os
-from utils import read_array_from_file, write_array_to_file
+from utils import read_array_from_file
 
 
 def merge(arr, left, mid, right, output_file):
@@ -53,3 +53,4 @@ def main(input_filename="../txtf/input.txt", output_filename="../txtf/output.txt
 
 if __name__ == "__main__":
     main()
+
