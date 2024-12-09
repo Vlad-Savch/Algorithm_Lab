@@ -8,12 +8,10 @@ def sum_of_tenth(n, m, A, B):
         for b in B:
             products.append(a * b)
 
-    # Шаг 2: Сортировка произведений
     products.sort()
 
-    # Шаг 3: Выбираем каждый 10-й элемент (начиная с первого, т.е. с индекса 0)
     sum_of_tenth_elements = 0
-    for i in range(0, len(products), 10):  # Индексы с шагом 10, начиная с 0
+    for i in range(0, len(products), 10):
         sum_of_tenth_elements += products[i]
 
     return sum_of_tenth_elements
