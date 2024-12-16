@@ -1,19 +1,15 @@
 import os
 
 
-def digit_sort(n, m, k, data):
-    strings = ['' for _ in range(n)]
-    for i in range(m):
-        for j in range(n):
-            strings[j] += data[i][j]
+def digit_sort(n, m, k, lines):
 
-    indices = list(range(n))
+    indices = list(range(1, n + 1))
 
-    for phase in range(k):
-        strings.sort(key=lambda x: x[m - phase - 1])
-        indices = [i for _, i in sorted(zip(strings, indices))]
+    for phase in range(1, k + 1):
+        pos = m - phase
+        indices.sort(key=lambda i: lines[pos][i - 1])
 
-    return [i + 1 for i in indices]
+    return indices
 
 
 def process_file(input_filename, output_filename):
@@ -23,9 +19,9 @@ def process_file(input_filename, output_filename):
 
     with open(input_path, "r") as infile:
         n, m, k = map(int, infile.readline().split())
-        data = [infile.readline().strip() for _ in range(m)]
+        lines = [infile.readline().strip() for _ in range(m)]
 
-    result = digit_sort(n, m, k, data)
+    result = digit_sort(n, m, k, lines)
 
     with open(output_path, "w") as outfile:
         outfile.write(" ".join(map(str, result)))

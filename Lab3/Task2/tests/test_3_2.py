@@ -9,6 +9,7 @@ class TestAntiQuickSort(unittest.TestCase):
         expected_result = [2, 3, 1]
 
         actual_result = generate_anti_quicksort(test_value)
+
         self.assertEqual(actual_result, expected_result)
 
     def test2_anti_quicksort(self):
@@ -16,6 +17,7 @@ class TestAntiQuickSort(unittest.TestCase):
         expected_result = [2, 4, 3, 1]
 
         actual_result = generate_anti_quicksort(test_value)
+
         self.assertEqual(actual_result, expected_result)
 
 
