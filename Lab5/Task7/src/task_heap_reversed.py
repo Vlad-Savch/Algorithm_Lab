@@ -1,6 +1,7 @@
 import os
 from utils import read_array_from_file, write_array_to_file
 
+
 def min_heapify(arr, n, i):
     smallest = i
     left = 2 * i + 1

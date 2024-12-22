@@ -20,3 +20,8 @@
 .\Lab5\Task2\src\task_tree_height.py
 .\Lab5\Task4\src\task_pyramid.py
 .\Lab5\Task7\src\task_heap_reversed.py
+.\Lab6\Task1\src\task_set_operations.py
+.\Lab6\Task2\src\task_phonebook.py
+.\Lab6\Task4\src\task_associative_array.py
+.\Lab6\Task6\src\task_is_fibonacci.py
+.\Lab6\Task8\src\task_hash_table.py
