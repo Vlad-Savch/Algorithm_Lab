@@ -1,5 +1,5 @@
 import os
-
+from utils import read_array_from_file, write_array_to_file
 
 def generate_anti_quicksort(n):
     a = []
@@ -19,8 +19,7 @@ def process_file(input_filename, output_filename):
 
     anti_qs_array = generate_anti_quicksort(n)
 
-    with open(output_path, 'w') as outfile:
-        outfile.write(" ".join(map(str, anti_qs_array)))
+    write_array_to_file(output_path, anti_qs_array)
 
 
 def main(input_filename="../txtf/input.txt", output_filename="../txtf/output.txt"):

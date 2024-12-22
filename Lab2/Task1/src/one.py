@@ -30,9 +30,9 @@ def sort_file(input_filename="input.txt", output_filename="output.txt"):
     input_path = os.path.join(base_dir, "../txtf", input_filename)
     output_path = os.path.join(base_dir, "../txtf", output_filename)
 
-    array = read_array_from_file(input_filename)
+    array = read_array_from_file(input_path)
     sorted_array = merge_sort(array)
-    write_array_to_file(output_filename, sorted_array)
+    write_array_to_file(output_path, sorted_array)
 
 
 def main(input_filename="../txtf/input.txt", output_filename="../txtf/output.txt"):

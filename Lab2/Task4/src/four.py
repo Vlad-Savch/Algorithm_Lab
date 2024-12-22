@@ -24,8 +24,7 @@ def process_file(input_path, output_path):
 
     result = [binary_search(a, x) for x in b]
 
-    with open(output_path, 'w') as file:
-        file.write(' '.join(map(str, result)))
+    write_array_to_file(output_path, result)
 
 
 def main():

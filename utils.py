@@ -24,5 +24,4 @@ def read_array_from_file(input_filename):
 
 def write_array_to_file(output_filename, array):
     with open(output_filename, "w") as f:
-        f.write(" ".join(map(str, array)))
-
+        f.write(' '.join(map(str, array)))

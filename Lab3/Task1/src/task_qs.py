@@ -39,9 +39,9 @@ def quick_sort_file3(input_filename, output_filename):
     input_path = os.path.join(base_dir, "../txtf", input_filename)
     output_path = os.path.join(base_dir, "../txtf", output_filename)
 
-    arr = read_array_from_file(input_filename)
+    arr = read_array_from_file(input_path)
     randomized_quick_sort3(arr, 0, len(arr) - 1)
-    write_array_to_file(output_filename, arr)
+    write_array_to_file(output_path, arr)
 
 
 def main(input_filename="../txtf/input.txt", output_filename="../txtf/output.txt"):

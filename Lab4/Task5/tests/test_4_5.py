@@ -16,8 +16,8 @@ class TestMaxStack(unittest.TestCase):
 
         stack.push(1)
         stack.push(2)
-
         stack.pop()
+
         self.assertEqual(stack.get_max(), 1)
 
     def test_multiple_push_pop(self):

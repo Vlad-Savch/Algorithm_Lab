@@ -5,7 +5,7 @@ from Lab4.Task7.src.task_max_in_sequence import max_in_sequence
 class TestMaxInSequence(unittest.TestCase):
     def test_task(self):
         n = 8
-        arr = [1, 3, -1, -3, 5]
+        arr = [2, 7, 3, 1, 5, 2, 6, 2]
         m = 4
 
         result = max_in_sequence(n, arr, m)

@@ -1,4 +1,5 @@
 import os
+from utils import write_array_to_file
 
 
 def digit_sort(n, m, k, lines):
@@ -23,8 +24,7 @@ def process_file(input_filename, output_filename):
 
     result = digit_sort(n, m, k, lines)
 
-    with open(output_path, "w") as outfile:
-        outfile.write(" ".join(map(str, result)))
+    write_array_to_file(output_path, result)
 
 
 def main(input_filename="../txtf/input.txt", output_filename="../txtf/output.txt"):

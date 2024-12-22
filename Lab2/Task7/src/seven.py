@@ -1,6 +1,7 @@
 import os
 from utils import read_array_from_file, write_array_to_file
 
+
 def max_subarray_sum(arr):
     max_current = max_global = arr[0]
     for i in range(1, len(arr)):
@@ -15,10 +16,9 @@ def process_file(input_filename, output_filename):
     input_path = os.path.join(base_dir, "../txtf", input_filename)
     output_path = os.path.join(base_dir, "../txtf", output_filename)
 
-    array = read_array_from_file(input_filename)
+    array = read_array_from_file(input_path)
     result = max_subarray_sum(array)
-    with open(output_filename, "w") as f:
-        f.write(str(result))
+    write_array_to_file(output_path, str(result))
 
 
 def main(input_filename="../txtf/input.txt", output_filename="../txtf/output.txt"):
