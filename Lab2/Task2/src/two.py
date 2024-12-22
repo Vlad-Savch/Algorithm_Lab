@@ -41,7 +41,7 @@ def process_file(input_filename, output_filename):
     input_path = os.path.join(base_dir, "../txtf", input_filename)
     output_path = os.path.join(base_dir, "../txtf", output_filename)
 
-    array = read_array_from_file(input_path)
+    array, n = read_array_from_file(input_path)
     with open(output_path, 'w') as output_file:
         merge_sort(array, 0, len(array) - 1, output_file)
         output_file.write(" ".join(map(str, array)))

@@ -16,3 +16,7 @@
 .\Lab4\Task7\src\task_max_in_sequence.py
 .\Lab4\Task8\src\task_postfix.py
 .\Lab4\Task13\src\task_stack_and_queue.py
+.\Lab5\Task1\src\task_is_heap.py
+.\Lab5\Task2\src\task_tree_height.py
+.\Lab5\Task4\src\task_pyramid.py
+.\Lab5\Task7\src\task_heap_reversed.py

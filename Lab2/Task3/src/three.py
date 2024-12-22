@@ -59,7 +59,7 @@ def process_file(input_filename, output_filename):
     input_path = os.path.join(base_dir, "../txtf", input_filename)
     output_path = os.path.join(base_dir, "../txtf", output_filename)
 
-    array = read_array_from_file(input_path)
+    array, n = read_array_from_file(input_path)
     result = count_inversions(array)
     write_array_to_file(output_path, str(result))
 

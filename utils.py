@@ -17,11 +17,16 @@ def memory_data(func):
 
 def read_array_from_file(input_filename):
     with open(input_filename, "r") as f:
-        f.readline()
+        n = int(f.readline().strip())
         array = list(map(int, f.readline().strip().split()))
-    return array
+    return array, n
 
 
 def write_array_to_file(output_filename, array):
     with open(output_filename, "w") as f:
         f.write(' '.join(map(str, array)))
+
+
+def write_string_to_file(output_filename, string):
+    with open(output_filename, "w") as f:
+        f.write(str(string))
