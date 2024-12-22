@@ -1,5 +1,5 @@
 import os
-from utils import write_string_to_file
+from utils import write_string_to_file, read_array_from_file
 
 
 def is_heap(n, arr):

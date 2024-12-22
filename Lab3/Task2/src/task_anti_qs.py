@@ -1,6 +1,7 @@
 import os
 from utils import read_array_from_file, write_array_to_file
 
+
 def generate_anti_quicksort(n):
     a = []
     for i in range(1, n + 1):

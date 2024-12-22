@@ -1,4 +1,6 @@
 import os
+from utils import read_array_from_file, write_array_to_file
+
 
 def build_min_heap(arr):
     n = len(arr)
@@ -31,9 +33,7 @@ def process_file(input_filename, output_filename):
     input_path = os.path.join(base_dir, "../txtf", input_filename)
     output_path = os.path.join(base_dir, "../txtf", output_filename)
 
-    with open(input_path, "r") as file:
-        n = int(file.readline().strip())
-        arr = list(map(int, file.readline().strip().split()))
+    arr = read_array_from_file(input_path)
 
     swaps = build_min_heap(arr)
 

@@ -27,7 +27,9 @@ def process_file(input_filename, output_filename):
     input_path = os.path.join(base_dir, "../txtf", input_filename)
     output_path = os.path.join(base_dir, "../txtf", output_filename)
 
-    parents, n = read_array_from_file(input_path)
+    with open(input_path, "r") as file:
+        n = int(file.readline().strip())
+        parents = list(map(int, file.readline().strip().split()))
 
     result = calculate_tree_height(n, parents)
 

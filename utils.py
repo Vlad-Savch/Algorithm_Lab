@@ -17,9 +17,9 @@ def memory_data(func):
 
 def read_array_from_file(input_filename):
     with open(input_filename, "r") as f:
-        n = int(f.readline().strip())
+        f.readline()
         array = list(map(int, f.readline().strip().split()))
-    return array, n
+    return array
 
 
 def write_array_to_file(output_filename, array):
