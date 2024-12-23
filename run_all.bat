@@ -25,3 +25,7 @@
 .\Lab6\Task4\src\task_associative_array.py
 .\Lab6\Task6\src\task_is_fibonacci.py
 .\Lab6\Task8\src\task_hash_table.py
+.\Lab7\Task1\src\task_coins.py
+.\Lab7\Task2\src\task_calculator.py
+.\Lab7\Task4\src\task_two_sequences.py
+.\Lab7\Task5\src\task_three_sequences.py

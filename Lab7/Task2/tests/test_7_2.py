@@ -1,5 +1,5 @@
 import unittest
-from Lab7.Task2.src.task_calculator import primitive_calculator  # Основной код находится в main.py
+from Lab7.Task2.src.task_calculator import primitive_calculator
 
 
 class TestPrimitiveCalculator(unittest.TestCase):
