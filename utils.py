@@ -31,3 +31,7 @@ def write_string_to_file(output_filename, string):
     with open(output_filename, "w") as f:
         f.write(str(string))
 
+
+def print_time_memory_data(func):
+    print("Время работы: ", time_data(func), "cекунд")
+    print("Память: ", memory_data(func), "мб")

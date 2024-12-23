@@ -30,7 +30,7 @@ class TestPhonebook(unittest.TestCase):
 
         result = process_queries(queries)
 
-        self.assertEqual(result, expected_output)
+        self.assertListEqual(result, expected_output)
 
     def test_case_2(self):
         queries = [

@@ -1,4 +1,5 @@
 import os
+from utils import print_time_memory_data
 
 
 def sum_of_tenth(n, m, A, B):
@@ -38,3 +39,4 @@ def main(input_filename="../txtf/input.txt", output_filename="../txtf/output.txt
 
 if __name__ == "__main__":
     main()
+    print_time_memory_data(main)

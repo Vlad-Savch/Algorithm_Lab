@@ -30,12 +30,12 @@ def display_txt_files(task_dir):
     output_file = os.path.join(txt_dir, "output.txt")
 
     if os.path.exists(input_file):
-        print(f"\nContents of input:\n")
+        print("\nContents of input:\n")
         with open(input_file, "r", encoding="utf-8") as f:
             print(f.read())
 
     if os.path.exists(output_file):
-        print(f"\nContents of output:\n")
+        print("\nContents of output:\n")
         with open(output_file, "r", encoding="utf-8") as f:
             print(f.read())
 

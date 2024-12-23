@@ -1,5 +1,5 @@
 import os
-from utils import write_array_to_file
+from utils import write_array_to_file, print_time_memory_data
 
 
 def digit_sort(n, m, k, lines):
@@ -33,3 +33,4 @@ def main(input_filename="../txtf/input.txt", output_filename="../txtf/output.txt
 
 if __name__ == "__main__":
     main()
+    print_time_memory_data(main)
