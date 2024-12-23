@@ -1,5 +1,4 @@
 import os
-import heapq
 
 
 def sum_of_tenth(n, m, A, B):

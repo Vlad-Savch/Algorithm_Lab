@@ -30,3 +30,4 @@ def write_array_to_file(output_filename, array):
 def write_string_to_file(output_filename, string):
     with open(output_filename, "w") as f:
         f.write(str(string))
+
